@@ -9,12 +9,12 @@ export const UserList = () => {
       <Datagrid rowClick="show">
         <TextField source="id" />
         <TextField source="name" />
-        <TextField source="username" />
+        {/* <TextField source="username" />
         <EmailField source="email" />
         <TextField source="address.street" />
         <TextField source="phone" />
         <MyUrlField source="website" />
-        <TextField source="company.name" />
+        <TextField source="company.name" /> */}
       </Datagrid>
     </List>
   );

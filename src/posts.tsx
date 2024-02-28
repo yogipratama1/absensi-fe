@@ -13,7 +13,7 @@ import {
 import { useRecordContext } from "react-admin";
 
 export const PostList = () => (
-  <List>
+  <List filters={postFilters}>
     <Datagrid rowClick="edit">
       <ReferenceField source="userId" reference="users" link="show" />
       <TextField source="id" />
@@ -27,6 +27,10 @@ const PostTitle = () => {
   const record = useRecordContext();
   return <span>Post {record ? `"${record.title}"` : ""}</span>;
 };
+const postFilters = [
+  <TextInput source="q" label="Search" alwaysOn />,
+  <ReferenceInput source="userId" label="User" reference="users" />,
+];
 export const PostEdit = () => (
   <Edit title={<PostTitle />}>
     <SimpleForm>

@@ -8,7 +8,7 @@ export const UserList = () => {
     <List>
       <Datagrid rowClick="show">
         <TextField source="id" />
-        <TextField source="name" />
+        <TextField source="nama" />
         {/* <TextField source="username" />
         <EmailField source="email" />
         <TextField source="address.street" />
